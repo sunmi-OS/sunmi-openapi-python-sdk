@@ -31,10 +31,10 @@ class SunmiRemoteManagementClient:
         app_id: Your Sunmi OpenAPI App ID.
         app_key: Your Sunmi OpenAPI App Key.
         base_url: API base URL. Defaults to the production endpoint.
-        timeout: Request timeout in seconds. Defaults to 30.
+        timeout: Request timeout in seconds. Defaults to 60.
     """
 
-    def __init__(self, app_id: str, app_key: str, base_url: str = _DEFAULT_BASE_URL, timeout: int = 30):
+    def __init__(self, app_id: str, app_key: str, base_url: str = _DEFAULT_BASE_URL, timeout: int = 60):
         self.app_id = app_id
         self.app_key = app_key
         self.base_url = base_url.rstrip("/")
@@ -70,11 +70,12 @@ class SunmiRemoteManagementClient:
             extra_headers: Optional additional request headers.
         """
         url = self.base_url + path
-        json_body = json.dumps(body)
+        json_body = json.dumps(body, allow_nan=False)
         headers = dict(extra_headers or {})
         headers.update(self._build_headers(json_body))
         headers["Content-Type"] = "application/json"
 
-        response = requests.post(url, json=body, headers=headers, timeout=self.timeout)
+        # Send the exact JSON content used to calculate the signature.
+        response = requests.post(url, data=json_body.encode("utf-8"), headers=headers, timeout=self.timeout)
         response.raise_for_status()
         return response.json()
