@@ -1,8 +1,7 @@
 """
 Update Device Remark
 
-Batch update device remarks in the current organization and descendant
-organizations within its device group tree.
+Batch update device remarks in the current organization and descendant organizations within its device group tree.
 
 API:  POST /v2/mdm/open/open/deviceCenter/device/updateRemark
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xqcaeghjk480
@@ -22,8 +21,8 @@ client = SunmiRemoteManagementClient(
 response = client.post(
     "/v2/mdm/open/open/deviceCenter/device/updateRemark",
     [
-        {"sn": "V13F674523245", "remark": "Front Desk Device"},
-        {"sn": "V13F674523246", "remark": "Backup Device"},
+        {"sn": "YOUR_DEVICE_SN_1", "remark": "Front Desk Device"},
+        {"sn": "YOUR_DEVICE_SN_2", "remark": "Backup Device"},
     ],
 )
 

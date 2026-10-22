@@ -22,8 +22,8 @@ response = client.post(
     "/v2/mdm/open/open/cmd/reboot",
     {
         "msn_list": [
-            "V13F674523245",
-            "V13F674523246",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
     },
 )

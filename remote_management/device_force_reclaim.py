@@ -22,8 +22,8 @@ response = client.post(
     "/v2/mdm/open/open/deviceCenter/devicemanage/device/forceRecycle",
     {
         "sn_list": [
-            "P2AABCD0001",
-            "P2AABCD0002",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
         "device_type": 1,
     },

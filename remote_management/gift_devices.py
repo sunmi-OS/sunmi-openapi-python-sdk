@@ -1,9 +1,7 @@
 """
 Gift Devices
 
-Gift devices from the current organization's device group tree, including
-descendant organizations, or its direct cooperative sub-accounts to another
-enterprise entity.
+Gift devices to another enterprise entity.
 
 API:  POST /v2/mdm/open/open/deviceCenter/bind/transfer
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xqzxeghjk491
@@ -24,8 +22,8 @@ response = client.post(
     "/v2/mdm/open/open/deviceCenter/bind/transfer",
     {
         "sn_list": [
-            "V13F674523245",
-            "V13F674523246",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
         "entity_id": "target_entity_id",
         "device_type": 1

@@ -21,7 +21,7 @@ client = SunmiRemoteManagementClient(
 response = client.post(
     "/v2/mdm/open/open/device/trafficStat",
     {
-        "msn": "V13F674523245",
+        "msn": "YOUR_DEVICE_SN_1",
         "net_type":0,
         "start_unix":1681142400,
         "end_unix":1681747200,

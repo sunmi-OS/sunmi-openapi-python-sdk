@@ -20,7 +20,7 @@ client = SunmiRemoteManagementClient(
 
 response = client.post(
     "/v2/mdm/open/open/device/switchStatus",
-    {"msn": "V13F674523245"},
+    {"msn": "YOUR_DEVICE_SN_1"},
 )
 
 print(json.dumps(response, indent=4, ensure_ascii=False))

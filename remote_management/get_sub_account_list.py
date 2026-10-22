@@ -1,9 +1,7 @@
 """
 Get Sub-Account List
 
-Retrieve descendant sub-accounts within the current organization's device group
-tree, together with its direct cooperative sub-accounts. The sub-account list is
-deduplicated and excludes the current account.
+Retrieve descendant sub-accounts that have device groups under the current organization, together with its cooperative sub-accounts.
 
 API:  POST /v2/mdm/open/open/deviceCenter/partner/getSubAccountList
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xqzzeghjk557

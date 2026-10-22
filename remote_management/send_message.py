@@ -25,8 +25,8 @@ response = client.post(
         "content": "Please complete the device update before closing time.",
         "alert_type": 1,
         "msn_list": [
-            "V13F674523245",
-            "V13F674523246",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
     },
 )

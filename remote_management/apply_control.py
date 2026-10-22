@@ -21,7 +21,7 @@ client = SunmiRemoteManagementClient(
 response = client.post(
     "/v2/mdm/open/open/device/applyControl",
     {
-        "msn": "V13F674523245",
+        "msn": "YOUR_DEVICE_SN_1",
         "controller_name": "Your Operator",
     },
 )

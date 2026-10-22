@@ -1,8 +1,7 @@
 """
 Update Device Alias
 
-Batch update aliases for devices in the current organization and its descendant
-organizations.
+Batch update aliases for devices in the current organization and its descendant organizations.
 
 API:  POST /v2/mdm/open/open/deviceCenter/device/updateAlias
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xrxqeghjk513
@@ -22,8 +21,8 @@ client = SunmiRemoteManagementClient(
 response = client.post(
     "/v2/mdm/open/open/deviceCenter/device/updateAlias",
     [
-        {"sn": "V13F674523245", "alias": "Cashier-01"},
-        {"sn": "V13F674523246", "alias": "Cashier-02"},
+        {"sn": "YOUR_DEVICE_SN_1", "alias": "Cashier-01"},
+        {"sn": "YOUR_DEVICE_SN_2", "alias": "Cashier-02"},
     ],
 )
 

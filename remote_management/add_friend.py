@@ -21,7 +21,7 @@ client = SunmiRemoteManagementClient(
 response = client.post(
     "/v2/mdm/open/open/deviceCenter/friends/addFriend",
     {
-        "open_id": "FBKHZVGT6QLOO",
+        "open_id": "YOUR_OPEN_ID",
     },
 )
 

@@ -8,7 +8,7 @@ Usage:
     from client import SunmiRemoteManagementClient
 
     client = SunmiRemoteManagementClient(app_id="YOUR_APP_ID", app_key="YOUR_APP_KEY")
-    response = client.post("/v2/mdm/open/open/device/applyControl", {"msn": "V13F674523245"})
+    response = client.post("/v2/mdm/open/open/device/applyControl", {"msn": "YOUR_DEVICE_SN_1"})
 """
 
 import hashlib

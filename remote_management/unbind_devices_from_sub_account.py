@@ -1,10 +1,7 @@
 """
 Unbind Devices From Sub-Account
 
-Reclaim devices from a sub-account within the current organization's device
-group tree or from one of its direct cooperative sub-accounts. Devices must
-currently belong to the specified sub-account and are returned to the current
-account.
+Recycle devices from a sub-account entity.
 
 API:  POST /v2/mdm/open/open/deviceCenter/subAccount/device/unbound
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xqrieghjk579
@@ -25,8 +22,8 @@ response = client.post(
     "/v2/mdm/open/open/deviceCenter/subAccount/device/unbound",
     {
         "sn_list": [
-            "V13F674523245",
-            "V13F674523246",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
         "entity_id": "sub_account_entity_id",
     },

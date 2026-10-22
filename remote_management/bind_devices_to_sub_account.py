@@ -1,8 +1,7 @@
 """
 Bind Devices To Sub-Account
 
-Assign devices from the current organization's device group tree or its direct
-cooperative sub-accounts to another sub-account within that combined scope.
+Assign devices from the current organization or its sub-organizations to another sub-account.
 
 API:  POST /v2/mdm/open/open/deviceCenter/subAccount/device/bound
 Doc (zh-CN): https://docs.sunmi.com/zh-CN/cdixeghjk491/xqrzeghjk557
@@ -23,8 +22,8 @@ response = client.post(
     "/v2/mdm/open/open/deviceCenter/subAccount/device/bound",
     {
         "sn_list": [
-            "V13F674523245",
-            "V13F674523246",
+            "YOUR_DEVICE_SN_1",
+            "YOUR_DEVICE_SN_2",
         ],
         "entity_id": "sub_account_entity_id",
     },
